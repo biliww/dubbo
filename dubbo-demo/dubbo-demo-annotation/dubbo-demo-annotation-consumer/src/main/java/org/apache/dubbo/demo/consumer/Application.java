@@ -36,8 +36,12 @@ public class Application {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ConsumerConfiguration.class);
         context.start();
         DemoService service = context.getBean("demoServiceComponent", DemoServiceComponent.class);
-        String hello = service.sayHello("world");
-        System.out.println("result :" + hello);
+
+        for (int i = 0; i < 10; i++) {
+            String hello = service.sayHello("world");
+            System.out.println("result xxx:" + hello);
+        }
+
         System.in.read();
     }
 

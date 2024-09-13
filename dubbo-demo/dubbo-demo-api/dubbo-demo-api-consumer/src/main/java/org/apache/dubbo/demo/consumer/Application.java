@@ -50,7 +50,7 @@ public class Application {
 
         DemoService demoService = ReferenceConfigCache.getCache().get(reference);
         String message = demoService.sayHello("dubbo");
-        System.out.println(message);
+        System.out.println("consumer--message:"+message);
 
         // generic invoke
         GenericService genericService = (GenericService) demoService;
